@@ -5,4 +5,6 @@ gunicorn
 joblib
 pandas
 scikit-learn
-
+tensorflow==2.13.0
+PIL
+io
