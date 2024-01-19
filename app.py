@@ -44,7 +44,7 @@ def upload():
         img = tf.expand_dims(img, axis = 0)  
         with open("model_test.pkl", 'rb') as file:
                 network = joblib.load(file)
-        predictions_test = network.predict(file_contents)
+        predictions_test = network.predict(img)
         
         image = Image.fromarray((predictions_test[0] * 255).astype(np.uint8))
         buffer = BytesIO()
